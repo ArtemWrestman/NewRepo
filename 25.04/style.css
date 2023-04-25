@@ -22,6 +22,7 @@
     header {
         width: 100%;
         height: 200px;
+        position: relative;
 
     }
     .imgheader {
@@ -49,9 +50,10 @@
         height: 200px;
         position: absolute;
         bottom: 0;
-
+        
     }
     .imgfooter {
+        position: relative;
         width: 100%;
         height: 200px;
     }
@@ -59,7 +61,7 @@
     h1 {
         font-size: 26px;
         font-family: MyFont;
-        color: rgb(16, 202, 31);
+        color: rgb(16, 190, 202);
         text-align: center;
     }
     p {
@@ -74,3 +76,12 @@
         color: rgb(16, 202, 31);
         text-align: left;
     }
+    .footerspan, .headerspan {
+        position: absolute;
+        font-size: 20px;
+        font-family: MyFont;
+        color: rgb(16, 190, 202);
+        right: 50%;
+        bottom: 50%;
+    }
+    
