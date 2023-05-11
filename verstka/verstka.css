@@ -1,0 +1,237 @@
+@font-face {
+    font-family: 'opensans';
+    src: url('OpenSans-Regular.ttf') format('woff2');
+}
+@font-face {
+    font-family: 'oswald';
+    src: url('Oswald-Bold.ttf') format('woff2');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'oswald';
+    src: url('Oswald-Medium.ttf') format('woff2');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'oswald';
+    src: url('Oswald-Regular.ttf') format('woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'FontAvesome';
+    src: url('fa-solid-900.ttf') format('woff2');
+    font-weight: 900;
+}
+
+body {
+    margin: 0;
+    font-family: 'oswald';
+}
+header {
+    height: 890px;
+}
+footer {
+    height: 181px;
+    background: #f7654a;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #fff;
+    padding: 30px 0 0;
+}
+main {
+    height: 931px;
+}
+.container {
+    width: 1110px;
+    margin: 0 auto;
+}
+.top {
+    height: 740px;
+    box-sizing: border-box;
+    background: linear-gradient(0deg, rgba(64, 65, 73, 0.9), rgba(64, 65, 73, 0.9)), url('header_bg.jpg') center no-repeat, #404149;
+    color: #fff;
+    text-align: center;
+}
+.top .container {
+    padding-top: 192px;
+    position: relative;
+}
+.top h1 {
+    margin: 0 auto;
+    width: 734px;
+    font-size: 64px;
+    line-height: 95px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+.top h4 {
+    margin: 17px auto 0;
+    width: 734px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.logo {
+    text-indent: -9999px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 60px;
+    height: 50px;
+    background: url('logo.svg');
+}
+.menu-hamburger {
+    display: flex;
+    box-sizing: border-box;
+    font-family: 'FontAvesome';
+    font-weight: 900;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    Line-height: 27px;
+    color: #FFFFFF;
+    position: absolute;
+    text-decoration: none;
+    top: 30px;
+    left: 1060px;
+    width: 50px;
+    height: 50px;
+    background: #F7654A;
+    border: solid 1px #000;    
+}
+/* --------------MENU HEADER------------------- */
+.menu {
+    /*box-sizing: border-box;*/
+    height: 300px;
+    background: #f7f7f7;
+    margin-top: -150px;
+    text-align: center;
+    padding: 0;
+}
+.menu-item {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    margin: 0px 15px; 
+    width: 190px;
+    height: 200px;
+}
+
+.menu-item h1 {
+    display: block;
+    margin-top: 57px;
+    margin-bottom: 0;
+    height: 86px;
+    font-family: 'oswald';
+    font-weight: 500;
+    font-size: 72px;
+    color: #f7654a;
+}
+.menu-item h2 {
+    margin-top: 25px;  
+    margin-bottom: 0;
+    height: 43px;
+    font-family: 'oswald';
+    font-weight: 500;
+    font-size: 36px;
+    color: black;
+}
+.menu-item p {
+    margin-top: 10px;
+    height: 22px;
+    font-family: 'oswald';
+    font-weight: 500;
+    font-size: 18px;
+    color: #999999;
+}
+/* --------------MAIN------------------- */
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    place-items: center;
+    width: 1110px;
+    height: 578px;
+}
+.main-header h2 {
+    padding-top: 100px; 
+    margin: 0 auto;
+    font-family: 'oswald';
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 53px;
+    text-align: center;
+    color: #404149;
+    width: 1110px;
+    height: 103px;
+}
+.main-item {
+    display: grid;
+    text-align: left;
+    width: 350px;
+    height: 578px;
+}
+.main-img img {
+    width: 350px;
+    height: 380px;
+}
+.main-item h3 {
+    font-family: 'oswald';
+    font-weight: 500;
+    margin-top: 61px;  
+    margin-bottom: 0;
+    font-size: 24px;
+    line-height: 36px;
+    color: #404149;
+}
+.main-item p {
+    font-family: 'opensans';
+    margin-top: 14px;  
+    font-size: 16px;
+    line-height: 22px;
+    color: #999999;
+}
+/* --------------FOOTER------------------- */
+footer h3 {
+    font-family: 'oswald';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 71px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+footer h6 {
+    font-family: 'oswald';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding-top: 5px;
+}
+footer button {
+    float: right;
+    background: #fff;
+    border: none;
+    width: 175px;
+    height: 49px;
+    padding: 14px 30px;
+    color: #000;
+    cursor: pointer;
+    margin-top: 43px;
+    font-family: 'oswald';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+    text-align: right;
+}
+footer button::before {
+    content: '';
+    float: left;
+    height: 21px;
+    width: 18px;
+    background: url('btn.svg') 0px 4px no-repeat;
+}
