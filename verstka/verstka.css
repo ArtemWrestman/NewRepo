@@ -36,7 +36,7 @@ footer {
     font-weight: 700;
     letter-spacing: 0.02em;
     color: #fff;
-    padding: 30px 0 0;
+    padding: 0;
 }
 main {
     height: 931px;
@@ -45,6 +45,7 @@ main {
     width: 1110px;
     margin: 0 auto;
 }
+/*-------------------TOP-------------------------------*/
 .top {
     height: 740px;
     box-sizing: border-box;
@@ -73,33 +74,36 @@ main {
     text-align: center;
     text-transform: uppercase;
 }
-.logo {
-    text-indent: -9999px;
-    position: absolute;
-    top: 30px;
-    left: 0;
-    width: 60px;
-    height: 50px;
-    background: url('logo.svg');
-}
-.menu-hamburger {
-    display: flex;
-    box-sizing: border-box;
-    font-family: 'FontAvesome';
-    font-weight: 900;
-    font-size: 24px;
-    align-items: center;
-    justify-content: center;
-    Line-height: 27px;
-    color: #FFFFFF;
+.top a {
     position: absolute;
     text-decoration: none;
     top: 30px;
-    left: 1060px;
-    width: 50px;
     height: 50px;
+}
+.logo {
+    text-indent: -9999px;
+    position: absolute;
+    left: 0;
+    width: 60px;
+    background: url('logo.svg');
+}
+.menu-hamburger {
+    position: absolute;
+    right: 0;
+    width: 50px;
     background: #F7654A;
-    border: solid 1px #000;    
+}
+.menu-hamburger::after {
+    content: '\f0c9';
+    position: absolute;
+    top: 13px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-family: 'FontAvesome';
+    font-weight: 900;
+    font-size: 24px;
+    color: #fff;
 }
 /* --------------MENU HEADER------------------- */
 .menu {
@@ -114,14 +118,14 @@ main {
     display: inline-block;
     box-sizing: border-box;
     vertical-align: top;
-    margin: 0px 15px; 
+    margin: 57px 15px 57px; 
     width: 190px;
     height: 200px;
 }
 
 .menu-item h1 {
     display: block;
-    margin-top: 57px;
+    margin-top: 0;
     margin-bottom: 0;
     height: 86px;
     font-family: 'oswald';
@@ -139,7 +143,7 @@ main {
     color: black;
 }
 .menu-item p {
-    margin-top: 10px;
+    margin-top: 11px;
     height: 22px;
     font-family: 'oswald';
     font-weight: 500;
@@ -173,14 +177,19 @@ main {
     width: 350px;
     height: 578px;
 }
+/* Если нужно убрать пробел в элементе
+.main-img {
+    height: 380;
+}*/
 .main-img img {
+    display: block; /* Если нужно убрать пробел в элементе*/
     width: 350px;
     height: 380px;
 }
 .main-item h3 {
     font-family: 'oswald';
     font-weight: 500;
-    margin-top: 61px;  
+    margin-top: 66px;  
     margin-bottom: 0;
     font-size: 24px;
     line-height: 36px;
@@ -201,6 +210,7 @@ footer h3 {
     line-height: 71px;
     letter-spacing: 1px;
     margin: 0;
+    padding-top: 30px;
 }
 footer h6 {
     font-family: 'oswald';
@@ -220,13 +230,14 @@ footer button {
     padding: 14px 30px;
     color: #000;
     cursor: pointer;
-    margin-top: 43px;
+    margin-top: 73px;
     font-family: 'oswald';
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0.05em;
     text-align: right;
+    
 }
 footer button::before {
     content: '';
