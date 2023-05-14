@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Загадки</title>
+        
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            button {
+                display: block;
+                margin: 50px auto;
+                width: 200px;
+                height: 100px;
+                font: bold 24px Arial;
+                color: rgb(212, 9, 9);
+                background-color: rgb(165, 165, 165);
+                text-transform: uppercase;
+            }
+        </style>
+        
+        <script>
+            // +++++++++++++++++++++++++++++++ FIRST RIDDLE +++++++++++++++++++++++++++++++
+            function riddle_one() {
+                // верный ответ
+                let prize = 'время';
+                /*let prize_2 = "Время";*/
+                // создаем счетчик попыток
+                let count = 0;
+                // бесконечный цикл - пока юзер не угадает или пока не скажет "хватит"
+                for (;;) {
+                    // увеличиваем счетчик
+                    count++;
+                    // запрашиваем у юзера ответ
+                    let variant = prompt('Пожирает всё кругом: \nЗверя, птицу, лес и дом. \nСталь сгрызёт, железо сгложет, \nКрепкий камень уничтожит, \nВласть его всего сильней, \nДаже власти королей.');
+                    // проверяем ответ
+                    if (variant == 'хватит') return;
+                    if (variant == 'Время') {
+                        alert('Конечно это "Время"!');
+                        break;
+                    } 
+                    if (variant != prize) {
+                        alert('Ответ не верный');
+                       continue;
+                    } /*else if (variant != prize_2) {
+                        alert('Ответ не верный');
+                        continue;
+                    }*/
+                    if (variant == prize) {
+                        alert('Правильно!')
+                        break;
+                    } /*else if (variant == prize_2) {
+                        alert('Правильно!')
+                        break;
+                    }*/                
+                }
+                // вывести количество попыток до результата
+                alert(`Вы угадали с ${count} попыток`);
+            }
+            // +++++++++++++++++++++++++++++++ SECOND RIDDLE +++++++++++++++++++++++++++++++
+            function riddle_two() {
+                let prize = 12;
+                let count = 0;
+                for (;;) {
+                    count++;
+                    let variant = prompt('Сколько лет ждал Сириус Блэк, что аж устал? \n(Ответ числом)');
+                    if (variant == 'хватит') return;
+                    variant = +variant;
+                    if (variant != variant) {
+                        alert('Это не число. Экспеллиармус!');
+                        continue;
+                    }
+                    if (variant == prize) {
+                        alert ('Правильно! Двенадцать лет ждал! В Азкабане!')
+                        break;
+                    } else if (variant > prize) {
+                        alert('Перебор, попробуй еще раз');
+                    } else { (variant < prize)
+                        alert('Маловато будет, попробуй еще раз');
+                    }              
+                }
+                alert(`Вы угадали с ${count} попыток`);
+            }
+            // +++++++++++++++++++++++++++++++ THIRD RIDDLE +++++++++++++++++++++++++++++++
+            function riddle_three() {
+                let prize = 'ветер';
+                let prize2 = 'Ветер';
+                let count = 0;
+                for (;;) {
+                    count++;  
+                    let variant = prompt('Без голоса кричит \nБез зубов кусает \nБез крыльев летит \nБез горла завывает');
+                    if (variant == 'хватит') return;
+                    if (variant == prize2 || variant == prize) {
+                        alert ('Верно!')
+                        break;
+                    }  
+                    if (variant != prize) {
+                        alert('Вы не угадали');
+                        continue;
+                    }  
+                }
+                alert(`Вы угадали с ${count} попыток`);
+            }
+            // +++++++++++++++++++++++++++++++ FOURTH RIDDLE +++++++++++++++++++++++++++++++
+            function riddle_four() {
+                let prize = 'Капитан Джек Воробей';
+                let count = 5;
+                let trying = 0;
+                for (;;) {
+                    count--;
+                    trying++;  
+                    let variant = prompt('Кто выбрался с необитаемного острова на двух морских черепахах? \nУ тебя 5 попыток');
+                    if (count == 0) {
+                        alert('У тебя закончились попытки, отправляйся драить палубу');
+                        return;
+                    }  
+                    if (variant == 'хватит') return;
+                    if (variant == 'Джек Воробей') {
+                        alert('Капитан Джек Воробей, мой друг!');
+                        continue;
+                    } 
+                    if (variant != prize) {
+                        alert('Попробуй еще раз, матрос');
+                        continue;
+                    }  
+                    if (variant == prize) {
+                        alert ('Бриг мне у бухту, ты прав!')
+                        break;
+                    }
+     
+                }
+                alert(`Вы угадали с ${trying} попыток`);
+            }
+            // +++++++++++++++++++++++++++++++ FIFTH RIDDLE +++++++++++++++++++++++++++++++
+            function riddle_five() {
+                let prize = 'Всегда';
+                let count = 0;
+                for (;;) {
+                    count++;  
+                    let variant = prompt('После стольких лет?');
+                    if (variant == 'хватит') return;
+                    if (variant == 'всегда') {
+                        alert('Шалость удалась!');
+                        break;
+                    } 
+                    if (variant != prize) {
+                        alert('Ответ не верный. Минус 10 очков Грифиндору');
+                        continue;
+                    }  
+                    if (variant == prize) {
+                        alert ('Верно. Вы наверное гордитесь тем, что вы невероятная всезнайка?')
+                        break;
+                    }
+     
+                }
+                alert(`Вы угадали с ${count} попыток`);
+            }
+        </script>
+    </head>
+    
+    <body>
+        <button type="button" onclick="riddle_one();">Отгадай первую загадку</button>
+        <button type="button" onclick="riddle_two();">Отгадай вторую загадку</button>
+        <button type="button" onclick="riddle_three();">Отгадай третью загадку</button>
+        <button type="button" onclick="riddle_four();">Отгадай четвертую загадку</button>
+        <button type="button" onclick="riddle_five();">Ответь на вопрос</button>
+    </body>
+</html>
