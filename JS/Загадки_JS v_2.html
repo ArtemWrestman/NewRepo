@@ -40,7 +40,8 @@
                         count++;
                         alert('Конечно это "Время"!');
                         break;
-                    } 
+                    } /*".toLowerCase()" вместо этого варианта */
+                    variant = first_prize.toLowerCase();
                     if (variant != first_prize) {
                         alert('Ответ не верный');
                        break;
@@ -88,6 +89,7 @@
                 for (;;) { 
                     let variant = prompt('Без голоса кричит \nБез зубов кусает \nБез крыльев летит \nБез горла завывает');
                     if (variant == 'хватит') return;
+                    variant = third_prize.toLowerCase(); 
                     if (variant == third_prize2 || variant == third_prize) {
                         count++;
                         alert ('Верно!')
@@ -101,14 +103,15 @@
             
             // +++++++++++++++++++++++++++++++ FOURTH RIDDLE +++++++++++++++++++++++++++++++
             
-                let fourth_prize = 'Капитан Джек Воробей';
+                let fourth_prize = 'капитан джек воробей';
                 for (;;) { 
                     let variant = prompt('Кто выбрался с необитаемного острова на двух морских черепахах?');
                     if (variant == 'хватит') return;
-                    if (variant == 'Джек Воробей') {
+                    if (variant == 'Джек Воробей' || variant == 'джек воробей') {
                         alert('Капитан Джек Воробей, мой друг!');
                         break;
                     } 
+                    variant = fourth_prize.toLowerCase(); 
                     if (variant != fourth_prize) {
                         alert('Ответ не верный, матрос');
                         break;
@@ -122,15 +125,16 @@
                 }
             
             // +++++++++++++++++++++++++++++++ FIFTH RIDDLE +++++++++++++++++++++++++++++++
-                let fifth_prize = 'Всегда';
+                let fifth_prize = 'всегда';
                 for (;;) { 
                     let variant = prompt('После стольких лет?');
                     if (variant == 'хватит') return;
-                    if (variant == 'всегда') {
+                    if (variant == 'Всегда') {
                         count++;
                         alert('Шалость удалась!');
                         break;
                     } 
+                    variant = fifth_prize.toLowerCase();
                     if (variant != fifth_prize) {
                         alert('Ответ не верный. Минус 10 очков Грифиндору');
                         break;
