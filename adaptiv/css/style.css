@@ -583,7 +583,11 @@ footer button {
     margin: 72px auto auto;
     cursor: pointer;
 }
-
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 #map {
     display: block;
     box-sizing: border-box;
