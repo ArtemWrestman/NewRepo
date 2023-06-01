@@ -93,7 +93,7 @@ header a {
 .f_wrap {
     border-top: 1px solid rgba(255,255,255,.4);
 }
-footer ul {
+footer ol {
     display: flex;
     justify-content: space-between;
 }
@@ -682,7 +682,7 @@ footer button {
         height: 31.48px;
 
     }
-    footer ul {
+    footer ol {
         display: block;
     }
     footer li {
